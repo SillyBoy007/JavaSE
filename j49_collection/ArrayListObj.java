@@ -18,23 +18,7 @@ class Book{
         return "书名:"+this.title+"价格:"+this.price+"\n";
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj){
-            return true;
-        }
-        if (this == null){
-            return false;
-        }
-        if (!(obj instanceof Book)){
-            return false;
-        }
-        Book book = (Book) obj;
-        if (this.title.equals(book.title) && this.price == book.price){
-            return true;
-        }
-        return false;
-    }
+
 }
 public class ArrayListObj {
     public static void main(String [] args){

@@ -1,24 +1,24 @@
 package model;
 //第二个代码模型
 //
-class Dept{
+class MyDept{
     private int deptno;
     private String dname;
     private String loc;
-    private Emp emps[]; //多个雇员
+    private MyEmp[] emps; //多个雇员
 
-    public Dept(){}
-    public Dept(int deptno,String dname,String loc){
+    public MyDept(){}
+    public MyDept(int deptno,String dname,String loc){
             this.deptno = deptno;
             this.dname = dname;
             this.loc = loc;
     }
 
-    public void setEmps(Emp emps []){
+    public void setEmps(MyEmp[] emps){
         this.emps = emps;
     }
 
-    public Emp[] getEmps() {
+    public MyEmp[] getEmps() {
         return this.emps;
     }
 
@@ -28,17 +28,17 @@ class Dept{
     }
 }
 
-class Emp{
+class MyEmp{
     private int empno;
     private String ename;
     private String job;
     private double sal;
     private double comm;
-    private Dept dept; //一个部门
-    private Emp mgr; //一个领导
+    private MyDept dept; //一个部门
+    private MyEmp mgr; //一个领导
 
-    public Emp(){}
-    public Emp(int empno,String ename,String job,double sal,double comm){
+    public MyEmp(){}
+    public MyEmp(int empno,String ename,String job,double sal,double comm){
             this.empno = empno;
             this.ename = ename;
             this.job = job;
@@ -46,16 +46,16 @@ class Emp{
             this.comm = comm;
     }
 
-    public void setDept(Dept dept){
+    public void setDept(MyDept dept){
         this.dept = dept;
     }
-    public Dept getDept(){
+    public MyDept getDept(){
         return this.dept;
     }
-    public void setMgr(Emp mgr){
+    public void setMgr(MyEmp mgr){
         this.mgr = mgr;
     }
-    public Emp getMgr(){
+    public MyEmp getMgr(){
         return this.mgr;
     }
     public String getInfo() {
@@ -65,12 +65,12 @@ class Emp{
 
 public class EmpDept {
     public static void main(String args[]){
-        Dept dept = new Dept(1001,"Acount","NewYork");
-        Dept dept2 = new Dept(1002,"YJY","hangzhou");
-        Emp ea = new Emp(1111,"wang","clear",233.00,2000.00);
-        Emp eb = new Emp(1112,"xia","js",133.00,3000.00);
-        Emp ec = new Emp(1113,"lin","java",321,4000.00);
-        Emp ed = new Emp(1114,"yu","python",399.00,5000.00);
+        MyDept dept = new MyDept(1001,"Acount","NewYork");
+        MyDept dept2 = new MyDept(1002,"YJY","hangzhou");
+        MyEmp ea = new MyEmp(1111,"wang","clear",233.00,2000.00);
+        MyEmp eb = new MyEmp(1112,"xia","js",133.00,3000.00);
+        MyEmp ec = new MyEmp(1113,"lin","java",321,4000.00);
+        MyEmp ed = new MyEmp(1114,"yu","python",399.00,5000.00);
         //设置雇员和领导的关系
         ea.setMgr(eb);
         eb.setMgr(ec);
@@ -80,7 +80,7 @@ public class EmpDept {
         ec.setDept(dept);
         ec.setDept(dept2);
         //设置部门和雇员的关系
-        dept.setEmps(new Emp[]{ea,eb,ec});
+        dept.setEmps(new MyEmp[]{ea,eb,ec});
 
         //System.out.println(ea.getMgr().getInfo());
         for (int x = 0;x<dept.getEmps().length;x++){

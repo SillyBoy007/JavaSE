@@ -14,10 +14,7 @@ class I extends H{
     public void print(){    //4.调用重写后的方法,此时num还未初始化
         System.out.println(this.num);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 577521bd9d6d3f186b4bd5a7fb371f5b4b02bdb8
 }
 public class TypeFour {
     public static void main(String args[]){

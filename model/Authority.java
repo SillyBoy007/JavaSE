@@ -1,11 +1,7 @@
 package model;
-<<<<<<< HEAD
+
 //æƒé™å…³ç³»ç»„ æ•°æ®è¡¨å¤šå¯¹å¤šå…³ç³»æ˜ å°„
 class Admin{    //ç®¡ç†è´¦å·
-=======
-//È¨ÏÞ¹ØÏµ×é Êý¾Ý±í¶à¶Ô¶à¹ØÏµÓ³Éä
-class Admin{    //¹ÜÀíÕËºÅ
->>>>>>> 577521bd9d6d3f186b4bd5a7fb371f5b4b02bdb8
     private String aid;
     private String password;
     private Role role;
@@ -46,11 +42,9 @@ class Role{
         return this.groups;
     }
     public String getInfo(){
-<<<<<<< HEAD
+
         return "äººå‘˜ç¼–å·:"+this.rid+"   "+"å§“å:"+this.title;
-=======
-        return "ÈËÔ±±àºÅ:"+this.rid+"   "+"ÐÕÃû:"+this.title;
->>>>>>> 577521bd9d6d3f186b4bd5a7fb371f5b4b02bdb8
+
     }
 
 }
@@ -77,11 +71,8 @@ class Group{
         return this.actions;
     }
     public String getInfo(){
-<<<<<<< HEAD
+
         return "ç»„ç¼–å·:"+this.gid+"    "+"ç»„å:"+this.title;
-=======
-        return "×é±àºÅ:"+this.gid+"    "+"×éÃû:"+this.title;
->>>>>>> 577521bd9d6d3f186b4bd5a7fb371f5b4b02bdb8
     }
 }
 class Action{
@@ -102,11 +93,9 @@ class Action{
         return this.group;
     }
     public String getInfo(){
-<<<<<<< HEAD
+
         return "æƒé™ç¼–å·:"+this.acid+"  "+"æƒé™åç§°:"+this.title+"  "+"url"+this.url;
-=======
-        return "È¨ÏÞ±àºÅ:"+this.acid+"  "+"È¨ÏÞÃû³Æ:"+this.title+"  "+"url"+this.url;
->>>>>>> 577521bd9d6d3f186b4bd5a7fb371f5b4b02bdb8
+
     }
 }
 public class Authority {
@@ -114,7 +103,6 @@ public class Authority {
         Admin a1 = new Admin("admin","123456");
         Admin a2 = new Admin("mldn","234567");
         Admin a3 = new Admin("add","456789");
-<<<<<<< HEAD
         Role  r1 = new Role(1,"ç³»ç»Ÿç®¡ç†å‘˜");
         Role  r2 = new Role(2,"ä¿¡æ¯ç®¡ç†å‘˜");
         Group g1 = new Group(10,"ä¿¡æ¯ç®¡ç†");
@@ -126,19 +114,8 @@ public class Authority {
         Action ac2 = new Action(102,"æ–°é—»åˆ—è¡¨","-");
         Action ac3 = new Action(103,"æ–°é—»å®¡æ ¸","-");
         Action ac4 = new Action(104,"å¢žåŠ ç”¨æˆ·","-");
-=======
-        Role r1 = new Role(1,"ÏµÍ³¹ÜÀíÔ±");
-        Role r2 = new Role(2,"ÐÅÏ¢¹ÜÀíÔ±");
-        Group g1 = new Group(10,"ÐÅÏ¢¹ÜÀí");
-        Group g2 = new Group(11,"ÓÃ»§¹ÜÀí");
-        Group g3 = new Group(12,"Êý¾Ý¹ÜÀí");
-        Group g4 = new Group(13,"½Ó¿Ú¹ÜÀí");
-        Group g5 = new Group(14,"±¸·Ý¹ÜÀí");
-        Action ac1 = new Action(101,"ÐÂÎÅ·¢²¼","-");
-        Action ac2 = new Action(102,"ÐÂÎÅÁÐ±í","-");
-        Action ac3 = new Action(103,"ÐÂÎÅÉóºË","-");
-        Action ac4 = new Action(104,"Ôö¼ÓÓÃ»§","-");
->>>>>>> 577521bd9d6d3f186b4bd5a7fb371f5b4b02bdb8
+
+
 
         g1.setRoles(new Role[]{r1,r2});
         r1.setGroups(new Group[]{g1,g2,g3});
