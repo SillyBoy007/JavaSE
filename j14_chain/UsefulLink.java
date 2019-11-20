@@ -1,4 +1,3 @@
-package j14_chain;
 
 //可用链表
 class LinkA {
@@ -146,8 +145,6 @@ class LinkA {
         this.index = 0;
 
         this.retArray = new Object[this.count];
-
-        this.retArray = new String[this.count];
 
         this.root.toArrayNode();
         return this.retArray;

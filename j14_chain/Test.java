@@ -1,4 +1,3 @@
-package j14_chain;
 
 public class Test {
     public static void main(String args[]){

@@ -1,24 +1,26 @@
-package j14_chain;
 
-class SingleLink{
+class SingleLink {
     private Node root; //根节点
-    public void add(String data){ //添加数据
+
+    public void add(String data) { //添加数据
         Node newNode = new Node(data);
-        if (this.root == null){
+        if (this.root == null) {
             this.root = newNode;
-        }else{
+        } else {
             this.root.addNode(newNode);
         }
 
     }
-    public void print(){
-        if (this.root != null){
+
+    public void print() {
+        if (this.root != null) {
             this.root.printNode();
         }
     }
 }
+
 public class Chain {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         SingleLink l1 = new SingleLink();
         l1.add("wang");
         l1.add("xia");
